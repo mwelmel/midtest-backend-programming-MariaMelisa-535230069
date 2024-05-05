@@ -1,0 +1,20 @@
+meta {
+  name: product
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:5000/api/product?page_number=1&page_size=1
+  body: none
+  auth: none
+}
+
+query {
+  page_number: 1
+  page_size: 1
+}
+
+headers {
+  Authorization: JWT "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwidXNlcklkIjoiNjYyYjU3NzU1OWVlYWQ4NzFjZTA1ZjZkIiwiaWF0IjoxNzE0OTEzMDI2LCJleHAiOjE3MTQ5OTk0MjZ9.qO1Wy44g2pEPF_6bEGmA9FUkkX8cGXfcysFPaHVE2zU
+}

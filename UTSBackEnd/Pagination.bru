@@ -1,0 +1,23 @@
+meta {
+  name: Pagination
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:5000/API/users?page_number=1&page_size=3&sort_by=name&sort_order=asc&search
+  body: none
+  auth: none
+}
+
+query {
+  page_number: 1
+  page_size: 3
+  sort_by: name
+  sort_order: asc
+  search: 
+}
+
+headers {
+  Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwidXNlcklkIjoiNjYyYjU3NzU1OWVlYWQ4NzFjZTA1ZjZkIiwiaWF0IjoxNzE0OTEzMDI2LCJleHAiOjE3MTQ5OTk0MjZ9.qO1Wy44g2pEPF_6bEGmA9FUkkX8cGXfcysFPaHVE2zU
+}

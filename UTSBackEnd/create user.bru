@@ -1,0 +1,24 @@
+meta {
+  name: create user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5000/api/users
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwidXNlcklkIjoiNjYyYjU3NzU1OWVlYWQ4NzFjZTA1ZjZkIiwiaWF0IjoxNzE0Nzg5MjAxLCJleHAiOjE3MTQ4NzU2MDF9.Thl4ZooWSe61P34-oeyEizIByuODSV8U89AP7t5k8P0
+}
+
+body:json {
+  {
+    "name":"Ndut",
+    "email":"ndutlucu@gmail.com",
+    "password":"$ukaMakan12",
+    "password_confirm":"$ukaMakan12"
+  }
+}
