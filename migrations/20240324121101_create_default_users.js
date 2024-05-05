@@ -2,8 +2,8 @@ const logger = require('../src/core/logger')('api');
 const { User } = require('../src/models');
 const { hashPassword } = require('../src/utils/password');
 
-const name = 'Administrator';
-const email = 'admin@example.com';
+const name = 'Melisa';
+const email = 'mwelmelmel@gmail.com';
 const password = '123456';
 
 logger.info('Creating default users');
