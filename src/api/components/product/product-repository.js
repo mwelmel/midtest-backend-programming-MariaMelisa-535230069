@@ -29,7 +29,7 @@ async function createProduct(name, price) {
   try {
     // Basic validation
     if (!name || !price || isNaN(parseFloat(price))) {
-      throw new Error('Invalid product data');
+      throw new Error('produk data salah');
     }
 
     return await Product.create({
@@ -37,7 +37,7 @@ async function createProduct(name, price) {
       price,
     });
   } catch (error) {
-    throw new Error('Error while creating product');
+    throw new Error('Error ketika membuat produk');
   }
 }
 
@@ -45,7 +45,7 @@ async function updateProduct(id, name, price) {
   try {
     // Basic validation
     if (!name || !price || isNaN(parseFloat(price))) {
-      throw new Error('Invalid product data');
+      throw new Error('produk data salah');
     }
 
     return await Product.updateOne(
@@ -60,7 +60,7 @@ async function updateProduct(id, name, price) {
       }
     );
   } catch (error) {
-    throw new Error('Error while updating product');
+    throw new Error('Error ketika memperbarui product');
   }
 }
 
@@ -68,7 +68,7 @@ async function deleteProduct(id) {
   try {
     return await Product.deleteOne({ _id: id });
   } catch (error) {
-    throw new Error('Error while deleting product');
+    throw new Error('Error ketika menghapus produk');
   }
 }
 

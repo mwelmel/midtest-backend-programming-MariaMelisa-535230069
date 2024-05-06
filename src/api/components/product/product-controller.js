@@ -23,7 +23,10 @@ async function getProduct(request, response, next) {
     const product = await productsService.getProduct(request.params.id);
 
     if (!product) {
-      throw errorResponder(errorTypes.UNPROCESSABLE_ENTITY, 'Unknown product');
+      throw errorResponder(
+        errorTypes.UNPROCESSABLE_ENTITY,
+        'product tidak diketahui'
+      );
     }
 
     return response.status(200).json(product);
@@ -41,7 +44,7 @@ async function createProduct(request, response, next) {
     if (!success) {
       throw errorResponder(
         errorTypes.UNPROCESSABLE_ENTITY,
-        'Failed to create product'
+        'Gagal memasukkan produk'
       );
     }
 
@@ -61,7 +64,7 @@ async function updateProduct(request, response, next) {
     if (!success) {
       throw errorResponder(
         errorTypes.UNPROCESSABLE_ENTITY,
-        'Failed to update product'
+        'Gagal memasukkan produk'
       );
     }
 
@@ -79,7 +82,7 @@ async function deleteProduct(request, response, next) {
     if (!success) {
       throw errorResponder(
         errorTypes.UNPROCESSABLE_ENTITY,
-        'Failed to delete product'
+        'Gagal memasukkan produk'
       );
     }
 
