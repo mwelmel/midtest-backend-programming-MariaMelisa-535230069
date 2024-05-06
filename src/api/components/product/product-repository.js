@@ -21,7 +21,7 @@ async function getProducts({ sort, search }) {
       data: products,
     };
   } catch (error) {
-    throw new Error('Error while fetching products');
+    throw new Error('error ketika menghitung produk yang kita punya');
   }
 }
 
